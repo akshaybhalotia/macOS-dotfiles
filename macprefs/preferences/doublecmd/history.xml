@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <History>
+    <Navigation>
+      <Item>/Applications/Double Commander.app/Contents/</Item>
+      <Item>/Applications/Double Commander.app/Contents/MacOS/</Item>
+    </Navigation>
+    <CommandLine/>
+    <FileMask/>
+    <SearchText/>
+    <SearchTextPath/>
+    <ReplaceText/>
+    <ReplaceTextPath/>
+    <SearchDirectories/>
+    <SearchExcludeFiles/>
+    <SearchExcludeDirectories/>
+  </History>
+</doublecmd>

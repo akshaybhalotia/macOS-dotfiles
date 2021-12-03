@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Disabled</key>
+	<false/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.logitech.manager.daemon</string>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>Nice</key>
+	<integer>0</integer>
+	<key>OnDemand</key>
+	<false/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Applications/Logi Options.app/Contents/Support/LogiMgrDaemon.app/Contents/MacOS/LogiMgrDaemon</string>
+		<string>--launchd</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+</dict>
+</plist>

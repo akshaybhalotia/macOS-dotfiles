@@ -1,0 +1,35 @@
+<!-- It's not advisable to edit this plist, it may be overwritten -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>keybase.kbfs</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>KEYBASE_LABEL</key>
+    <string>keybase.kbfs</string>
+    <key>KEYBASE_SERVICE_TYPE</key>
+    <string>launchd</string>
+    <key>KEYBASE_RUN_MODE</key>
+    <string>prod</string>
+  </dict>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Applications/Keybase.app/Contents/SharedSupport/bin/kbfs</string>
+    <string>-debug</string>
+    <string>-log-file=/Users/akshaybhalotia/Library/Logs/keybase.kbfs.log</string>
+    <string>-runtime-dir=/Users/akshaybhalotia/Library/Caches/Keybase</string>
+    <string>-mount-type=none</string>
+    <string>/Volumes/Keybase (akshaybhalotia)</string>
+  </array>
+  <key>KeepAlive</key>
+  <true/>
+  <key>StandardErrorPath</key>
+  <string>/Users/akshaybhalotia/Library/Logs/keybase.start.log</string>
+  <key>StandardOutPath</key>
+  <string>/Users/akshaybhalotia/Library/Logs/keybase.start.log</string>
+  <key>WorkingDirectory</key>
+  <string>/tmp</string>
+</dict>
+</plist>

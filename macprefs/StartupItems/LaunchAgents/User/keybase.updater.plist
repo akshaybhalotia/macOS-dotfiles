@@ -1,0 +1,29 @@
+<!-- It's not advisable to edit this plist, it may be overwritten -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>keybase.updater</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>KEYBASE_LABEL</key>
+    <string>keybase.updater</string>
+    <key>KEYBASE_SERVICE_TYPE</key>
+    <string>launchd</string>
+  </dict>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Applications/Keybase.app/Contents/SharedSupport/bin/updater</string>
+    <string>-path-to-keybase=/Applications/Keybase.app/Contents/SharedSupport/bin/keybase</string>
+  </array>
+  <key>KeepAlive</key>
+  <true/>
+  <key>StandardErrorPath</key>
+  <string>/Users/akshaybhalotia/Library/Logs/keybase.updater.log</string>
+  <key>StandardOutPath</key>
+  <string>/Users/akshaybhalotia/Library/Logs/keybase.updater.log</string>
+  <key>WorkingDirectory</key>
+  <string>/tmp</string>
+</dict>
+</plist>
