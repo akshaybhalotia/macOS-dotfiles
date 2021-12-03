@@ -1,0 +1,2 @@
+- https://addons.mozilla.org/en-US/firefox/addon/medium-unlimited-read-for-free/
+- https://addons.mozilla.org/en-US/firefox/addon/markdown-here/
