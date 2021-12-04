@@ -1,8 +1,19 @@
+Open iTerm and set preferences to laod from saved file
+
 Install browser extensions
 
 Disable cmd+Q in browsers
 
-Apps: - LogiOptionsPlus - 0hh1 - 2048 - Fire TV - QuickFTP - Tsuro - Two Dots - Wipro Next Smart Home
+Apps:
+
+- LogiOptionsPlus
+- 0hh1
+- 2048
+- Fire TV
+- QuickFTP
+- Tsuro
+- Two Dots
+- Wipro Next Smart Home
 
 https://apple.stackexchange.com/a/357378
 
