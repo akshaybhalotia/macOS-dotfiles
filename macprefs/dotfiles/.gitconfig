@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = akshaybhalotia
+	email = github@axy.one
+[core]
+	editor = code
+	excludesFile = ~/.gitignore
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main

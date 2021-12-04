@@ -1,0 +1,53 @@
+{
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "workbench.colorTheme": "Dracula",
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.intellisense": "rubyLocate",
+  "files.defaultLanguage": "jsonc",
+  "powermode.enabled": true,
+  "git.path": "/usr/local/bin",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "files.autoSave": "onFocusChange",
+  "editor.wordWrap": "on",
+  "diffEditor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "json.maxItemsComputed": 50000,
+  "markdown.marp.enableHtml": true,
+  "editor.accessibilitySupport": "off",
+  "editor.formatOnPaste": true,
+  "dart.allowAnalytics": false,
+  "dart.previewLsp": null,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "ruby.format": "rubocop",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "svgviewer.showzoominout": true
+}

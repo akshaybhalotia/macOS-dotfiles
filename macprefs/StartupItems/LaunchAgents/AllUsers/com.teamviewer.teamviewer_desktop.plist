@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+ <key>ProcessType</key>
+ <string>Interactive</string>
+ <key>Label</key>
+ <string>com.teamviewer.desktop</string>
+ <key>LimitLoadToSessionType</key>
+ <array>
+  <string>LoginWindow</string>
+  <string>Aqua</string>
+ </array>
+ <key>ProgramArguments</key>
+ <array>
+  <string>/Applications/TeamViewer.app/Contents/MacOS/TeamViewer_Desktop_Proxy</string>
+  <string>-RunAsAgent</string>
+  <string>YES</string>
+  <string>-Module</string>
+  <string>Full</string>
+ </array>
+ <key>WorkingDirectory</key>
+ <string>/Applications/TeamViewer.app/Contents/MacOS/</string>
+ <key>RunAtLoad</key>
+ <true/>
+ <key>KeepAlive</key>
+ <true/>
+ <key>Disabled</key>
+ <true/>
+</dict>
+</plist>

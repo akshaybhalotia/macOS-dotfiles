@@ -1,0 +1,8 @@
+Time.now
+a = Time.now
+b = Time.now
+b-a
+bye
+exit
+bye
+exit

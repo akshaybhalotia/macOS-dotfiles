@@ -4,23 +4,16 @@
     <img src="https://gravatar.com/avatar/96cf8b9421cac6ff337f4264aa02448f?s=500" alt="Logo" width="80">
   </a>
 
-  <h2 align="center">readme-template by akshaybhalotia</h3>
+  <h2 align="center">macOS-dotfiles by akshaybhalotia</h3>
 
   <p align="center">
-    ADD_DESCRIPTION_HERE
+    dotfiles and backups for my macOS setup
     <br />
-    <a href=""><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="">View Demo</a>
+    <a href="https://github.com/akshaybhalotia/macOS-dotfiles/issues">Report Bug</a>
     ·
-    <a href="https://github.com/akshaybhalotia/readme-template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/akshaybhalotia/readme-template/issues">Request Feature</a>
+    <a href="https://github.com/akshaybhalotia/macOS-dotfiles/issues">Request Feature</a>
   </p>
 </p>
-
-<div align="center">(insert badges here)</div>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -32,17 +25,12 @@
   - [Dependencies](#dependencies)
   - [Installing](#installing)
   - [Usage](#usage)
-    - [Run locally](#run-project-locally)
-    - [Run tests](#run-tests)
-    - [Build for distribution](#build-for-distribution)
-    - [Server distribution](#instructions-to-serve-distribution=build)
+    - [Restore](#restore)
+    - [Backup](#backup)
   - [Help](#help)
-- [Versioning](#versioning)
-  - [Version History](#version-history)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [Support](#support)
-- [Credits](#credits)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [About Authors](#about-authors)
@@ -51,188 +39,125 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-(An in-depth paragraph about your project and overview of use.)
-
-Use this repository as a base template to start a new repository with a guided README. The linked files such as LICENSE, CONTRIBUTING guide and CODE OF CONDUCT are optional, though highly recommended.
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`readme-template`
+These are my backups and dotfiles, for macOS. Feel free to peruse and use this repository as you need, or to start a new repository based on this.
 
 ### Built With
 
-- VS Code
-- 
+- [macprefs](https://github.com/clintmod/macprefs)
+- [Mackup](https://github.com/lra/mackup)
+- [iTerm](https://iterm2.com/)
+- [oh-my-zsh](https://ohmyz.sh/)
+- [Homebrew](https://brew.sh)
+- [VS Code](https://code.visualstudio.com/)
+-  - macOS 12.1
 - :heart:
 
 <!-- GETTING STARTED -->
 
 ## Getting Started
 
-(General instructions to get started)
+To restore everything, clone this repository, run `setup.sh` and then follow `additional_steps.md`.
 
-Simply clone or fork this repo and follow instructions in parantheses `(` & `)` to make edits to suit your needs.
-
-Or use the repo as a template using Github, follow instructions here: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template
+Taking backups is described below.
 
 ## Dependencies
 
-(Describe any prerequisites, libraries, OS version, etc., needed before installing program. Ex OS with min version, runtime env with min and max version.)
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-
-```sh
-npm install npm@latest -g
-```
+- [ - macOS 12.1](https://www.apple.com/macos/monterey/)
+- [z shell (zsh)](https://www.zsh.org/) - this now comes pre-installed on macOS, but in case you need to install separately you can do so using [Homebrew](https://brew.sh)
 
 ## Installing
 
-- (How/where to download your code)
-- (Any modifications needed to be made to files/folders)
-
-1. Clone the repo
+Clone the repo into `$HOME/code`
 
 ```sh
-git clone https://github.com/akshaybhalotia/readme-template.git
-```
-
-2. Install NPM packages
-
-```sh
-npm install
+git clone https://github.com/akshaybhalotia/macOS-dotfiles.git
 ```
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-- (How to run the code)
-- (Step-by-step bullets)
+### Restore
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Run setup script
 
-```
-code blocks for commands
-```
+   ```sh
+   sh setup.sh
+   ```
 
-### Run project locally
+2. Follow steps in `additional_steps.md`
 
-- (Step-by-step bullets)
+### Backup
 
-```
-code blocks for commands
-```
+1. Backup using `macprefs`
 
-### Run tests
+   ```sh
+   macprefs backup
+   ```
 
-- (Step-by-step bullets)
+2. Backup using `Mackup`
 
-```
-code blocks for commands
-```
+   ```sh
+   mackup backup
+   ```
 
-### Build for distribution
+3. Setup iTerm to save prefs to the backup file within the repo
 
-- (Step-by-step bullets)
+4. Dump Homebrew installations to `Brewfile`
 
-```
-code blocks for commands
-```
+   ```sh
+   brew bundle dump
+   ```
 
-### Instructions to serve distribution build
+5. Dump chrom\* extensions to file using this extension: [Export links of all extensions](https://chrome.google.com/webstore/detail/cmeckkgeamghjhkepejgjockldoblhcb/related)
 
-- (Step-by-step bullets)
+6. Dump VS Code extensions using this
 
-```
-code blocks for commands
-```
+   ```sh
+   code --list-extensions | xargs -L 1 echo code --install-extension
+   ```
 
-_For more commands and examples, please refer to the [Documentation](https://example.com)._
+7. List Firefox extensions manually
+
+8. List any additional steps, configs and theme settings at `additional_steps.md`
 
 ## Help
 
-(Any advise for common problems or issues.)
+For any issues relating to `macprefs`, `Mackup`, `iTerm`, `zsh`, `oh-my-zsh`, `Homebrew`, or any other specific apps - visit their respective sites and forums.
 
-```
-command to run if program contains helper info
-```
-
-(FAQs)
-
-<!-- CHANGELOG -->
-
-## Versioning
-
-(Details about the versioning system followed)
-
-We use [SemVer](https://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/akshaybhalotia/readme-template/tags).
-
-### Version History
-
-(History of changes made in each version, since this is expected to get long over time it is recommended to keep in a separate file)
-
-See [CHANGELOG](./CHANGELOG.md).
+For issues relating to my scripts, reach out to me and I will look into it.
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the [open issues](https://github.com/akshaybhalotia/readme-template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/akshaybhalotia/macOS-dotfiles/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
 ## Contributing
 
-(Add a guide for anyone to be able to contribute to the project, either on the readme or as a separate file)
+While I would like these dotfiles to be personalized to me, feel free to submit pull requests or open issues if something does not work.
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Sincere thanks to all our contributors. Thank you, [contributors](https://github.com/akshaybhalotia/readme-template/graphs/contributors)!
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Sincere thanks to all our contributors. Thank you, [contributors](https://github.com/akshaybhalotia/macOS-dotfiles/graphs/contributors)!
 
 You are requested to follow the contribution guidelines specified in [CONTRIBUTING.md](./CONTRIBUTING.md) and code of conduct at [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) while contributing to the project :smile:.
 
 ## Support
 
-(Ask for support or sponsorships by providing links or just add a simple message)
-
 Contributions, issues, and feature requests are welcome!
 Give a ⭐️ if you like this project!
-
-## Credits
-
-(Write credits for ideas, special contributions, etc.)
 
 <!-- LICENSE -->
 
 ## License
 
-(Legal license info)
-
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## Acknowledgments
 
-(Inspiration, code snippets, etc.)
-
-This template is inspired by:
-
-- [git-template](https://github.com/multunus/git-template)
-- [awesome-readme](https://github.com/matiassingers/awesome-readme)
-- [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-- [dbader](https://github.com/dbader/readme-template)
-- [zenorocha](https://gist.github.com/zenorocha/4526327)
-- [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+These dotfiles are inspired by the numerous dotfiles available throughout the internet and open source community, plus the personal frustration of having to setup a new machine, by hand, every damn time, which takes numerous hours.
 
 ## About Authors
 
-(Primary names and contact info)
-
-`readme-template` is created & maintained by Akshay Bhalotia. You can find me on Twitter - [@akshay_bhalotia](https://twitter.com/akshay_bhalotia) or write to me at `github [at] axy.one`.
-
-(You can insert top collaborators here. Also you can include org level stuff here such as:
-
-The names and logos for Acme are trademarks of Acme, Inc.
-
-We love open source software! See [our other projects](your-link-1) or [hire us](your-link-2) to help build your product.)
+`macOS-dotfiles` is created & maintained by Akshay Bhalotia. You can find me on Twitter - [@akshay_bhalotia](https://twitter.com/akshay_bhalotia) or write to me at `github [at] axy.one`.
