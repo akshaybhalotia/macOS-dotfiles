@@ -10,6 +10,7 @@ sudo xcodebuild -license accept
 sudo nvram StartupMute=%00
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/akshaybhalotia/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle
 
