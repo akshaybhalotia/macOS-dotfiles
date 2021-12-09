@@ -3,6 +3,7 @@ sudo -v
 chsh -s /bin/zsh
 
 sudo softwareupdate -i -a
+softwareupdate --install-rosetta
 xcode-select --install
 
 sudo nvram StartupMute=%00
