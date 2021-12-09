@@ -5,12 +5,15 @@ chsh -s /bin/zsh
 sudo softwareupdate -i -a
 softwareupdate --install-rosetta
 xcode-select --install
+sudo xcodebuild -license accept
 
 sudo nvram StartupMute=%00
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle
+
+sudo xcodebuild -license accept
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
