@@ -88,7 +88,7 @@ plugins=(
     npm
     npx
     nvm
-    osx
+    macos
     pod
     postgres
     python
@@ -103,7 +103,6 @@ plugins=(
     xcode
     zsh-autosuggestions
     zsh-interactive-cd
-    zsh_reload
     )
 
 source $ZSH/oh-my-zsh.sh
